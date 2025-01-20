@@ -11,8 +11,15 @@ const SoloRegistration = () => {
     formState: { errors },
   } = useForm<FormData>();
 
-  const onSubmit: SubmitHandler<FormData> = (data) => {
-    console.log(data);
+  const onSubmit: SubmitHandler<FormData> = async (data) => {
+    const response = await fetch("/api/register/solo", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    const result = await response;
+    console.dir(result, "registration - result");
   };
   return (
     <div className="my-4 mx-4 space-y-4">

@@ -38,6 +38,15 @@ const Register = ({ first, last, register, errors }: RegisterProps) => {
           error={errors.Lname?.message}
         />
 
+        <FieldTemplate
+          label="Phone Number"
+          id="Pnumber"
+          type="number"
+          placeholder="Enter Phone Number"
+          register={register}
+          error={errors.Pnumber?.message}
+        />
+
         <label htmlFor="tornament">Choose a tornament:</label>
 
         <select

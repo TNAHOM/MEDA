@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model RegisterSolo {
+  id       String   @id @default(uuid())
+  name      String
+  phoneNumber     Int
+  // For future let the admin to add the tournaments
+  tournamentId String
+  createdAt DateTime @default(now())
+}
