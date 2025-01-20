@@ -3,6 +3,6 @@ export interface FormData {
   PlayerNum: string;
   Fname: string;
   Lname: string;
-  Pnumber: string;
+  Pnumber: number;
   tornament: string;
 }
