@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "../../components/Common/Navbar";
 import BottomNav from "../../components/Common/BottomNav";
@@ -17,10 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className='bg-[#F9FAFB] h-screen"'>
+      <body className='bg-[#F9FAFB] h-screen'>
         <Navbar />
         {children}
-        <div className="block sm:hidden ">
+        <div className="block sm:hidden fixed bottom-0 w-full bg-white py-2">
           <BottomNav />
         </div>
         <Footer />

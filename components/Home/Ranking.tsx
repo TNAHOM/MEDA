@@ -33,7 +33,7 @@ const Ranking = () => {
                     </div>
                 </div>
                 <div className="">
-                    <TrophyIcon width={32} height={32} className='text-[#9CA3AF]'/>
+                    <TrophyIcon width={32} height={32} className='text-shade'/>
                 </div>
             </div>
 

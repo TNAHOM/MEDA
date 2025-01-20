@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center space-y-4">
           <h1 className="text-2xl font-bold">GoalGetter</h1>
-          <p className="text-[#9CA3AF]">Join the biggest football tournaments in your area.</p>
+          <p className="text-shade">Join the biggest football tournaments in your area.</p>
         </div>
 
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
@@ -17,22 +17,22 @@ const Footer = () => {
             <h3 className="text-lg font-semibold">Quick Links</h3>
             <ul className="mt-4 space-y-2">
               <li>
-                <a href="#" className="hover:text-[#9CA3AF]">
+                <a href="#" className="hover:text-shade">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#9CA3AF]">
+                <a href="#" className="hover:text-shade">
                   Tournaments
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#9CA3AF]">
+                <a href="#" className="hover:text-shade">
                   Register
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#9CA3AF]">
+                <a href="#" className="hover:text-shade">
                   Contact
                 </a>
               </li>
@@ -44,11 +44,11 @@ const Footer = () => {
             <h3 className="text-lg font-semibold">Contact</h3>
             <ul className="mt-4 space-y-2">
               <li className="flex items-center justify-center md:justify-start space-x-2">
-                <EnvelopeIcon className="h-5 w-5 text-[#9CA3AF]" />
+                <EnvelopeIcon className="h-5 w-5 text-shade" />
                 <span>support@goalgetter.com</span>
               </li>
               <li className="flex items-center justify-center md:justify-start space-x-2">
-                <PhoneIcon className="h-5 w-5 text-[#9CA3AF]" />
+                <PhoneIcon className="h-5 w-5 text-shade" />
                 <span>+1 234 567 890</span>
               </li>
             </ul>
@@ -58,13 +58,13 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold">Follow Us</h3>
             <div className="mt-4 flex items-center justify-center md:justify-start space-x-4">
-              <a href="#" className="text-[#9CA3AF] hover:text-white">
+              <a href="#" className="text-shade hover:text-white">
                 <EnvelopeIcon className="h-6 w-6" />
               </a>
-              <a href="#" className="text-[#9CA3AF] hover:text-white">
+              <a href="#" className="text-shade hover:text-white">
                 <EnvelopeIcon className="h-6 w-6" />
               </a>
-              <a href="#" className="text-[#9CA3AF] hover:text-white">
+              <a href="#" className="text-shade hover:text-white">
                 <EnvelopeIcon className="h-6 w-6" />
               </a>
             </div>
@@ -72,7 +72,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="mt-8 text-center text-[#9CA3AF]">
+        <div className="mt-8 text-center text-shade">
           <p>&copy; 2025 GoalGetter. All rights reserved.</p>
         </div>
       </div>
