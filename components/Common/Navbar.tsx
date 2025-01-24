@@ -11,7 +11,7 @@ const Navbar = () => {
         <h1 className="font-bold text-xl ml-2">Meda</h1>
         <div className="flex-1 flex justify-center ml-2 text-shade text-lg">
           <SignedIn>
-            <Link href="/dashboard">Dashboard</Link>
+            <Link href="/Dashboard">Dashboard</Link>
           </SignedIn>
         </div>
       </div>
