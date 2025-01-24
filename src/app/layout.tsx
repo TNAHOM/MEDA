@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import {
+  ClerkProvider,
+} from "@clerk/nextjs";
 import "./globals.css";
 import Navbar from "../../components/Common/Navbar";
 import BottomNav from "../../components/Common/BottomNav";
@@ -15,15 +18,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className='bg-[#F9FAFB] h-screen'>
-        <Navbar />
-        {children}
-        <div className="block sm:hidden fixed bottom-0 w-full bg-white py-2">
-          <BottomNav />
-        </div>
-        <Footer />
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className="bg-[#F9FAFB] h-screen">
+          <Navbar />
+          {children}
+          <div className="block sm:hidden fixed bottom-0 w-full bg-white py-2">
+            <BottomNav />
+          </div>
+          <Footer />
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
