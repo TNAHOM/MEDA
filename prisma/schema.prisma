@@ -12,6 +12,17 @@ model RegisterSolo {
   name      String
   phoneNumber     Int
   // For future let the admin to add the tournaments
-  tournamentId String
+  tournamentId  String @unique
+  tournament   Tournament @relation(fields: [tournamentId], references: [id])
   createdAt DateTime @default(now())
+}
+
+model Tournament{
+  id          String   @id @default(uuid())
+  name        String
+  location    String
+  locationLink  String
+  Date   DateTime
+  createdAt   DateTime @default(now())
+  registerSolo  RegisterSolo[]
 }
