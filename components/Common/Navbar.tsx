@@ -8,7 +8,9 @@ const Navbar = () => {
     <div className="h-16 w-full p-4 flex items-center justify-between bg-white px-16">
       <div className="flex gap-2">
         <Image src="/assets/Football.svg" alt="logo" height={32} width={32} />
-        <h1 className="font-bold text-xl ml-2">Meda</h1>
+        <h1 className="font-bold text-xl ml-2">
+          <Link href="/">Meda</Link>
+        </h1>
         <div className="flex-1 flex justify-center ml-2 text-shade text-lg">
           <SignedIn>
             <Link href="/Dashboard">Dashboard</Link>

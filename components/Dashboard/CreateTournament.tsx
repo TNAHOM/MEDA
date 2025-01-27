@@ -3,10 +3,14 @@ import React from "react";
 import { FieldTemplate } from "../Common/FieldTemplate";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { FormData } from "../../types/FormData";
-import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-const CreateTournament = () => {
+interface CreateTournamentProps {
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const CreateTournament = ({ isOpen, setIsOpen }: CreateTournamentProps) => {
   const {
     register,
     handleSubmit,
@@ -15,9 +19,8 @@ const CreateTournament = () => {
 
   const router = useRouter();
 
-  const [isOpen, setIsOpen] = useState(false);
-
   const onSubmit: SubmitHandler<FormData> = async (data) => {
+    console.log(data, 'data');
     try {
       const response = await fetch("/api/tournament", {
         method: "POST",
@@ -25,7 +28,7 @@ const CreateTournament = () => {
         body: JSON.stringify(data),
       });
 
-      if (response.ok) {
+      if (response.status == 200) {
         const result = await response.json();
         console.log("Registration successful:", result);
         setIsOpen(true);
@@ -69,11 +72,11 @@ const CreateTournament = () => {
           />
           <FieldTemplate
             label="Date"
-            id="date"
+            id="Date"
             type="date"
             placeholder="Enter Date"
             register={register}
-            error={errors.date?.message}
+            error={errors.Date?.message}
           />
           <input
             type="submit"
