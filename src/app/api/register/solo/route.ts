@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
 
 export async function POST(req: NextRequest) {
-    const { Fname, Lname, Pnumber } = await req.json();
+    const { Fname, Lname, Pnumber, tornament } = await req.json();
     if (!Fname || !Lname || !Pnumber) {
         return NextResponse.json({ error: "Missing required fields", status: 400 });
     }
@@ -13,10 +13,10 @@ export async function POST(req: NextRequest) {
             data: {
                 name: combineName,
                 phoneNumber: parseInt(Pnumber),
-                tournamentId: "Summer",
+                tournamentId: tornament,
             },
         });
-        return NextResponse.json(registerUser, {status: 200});
+        return NextResponse.json(registerUser, { status: 200 });
     } catch (error) {
         console.error(error);
         return NextResponse.json({ error: "Error registering user", status: 500 });
