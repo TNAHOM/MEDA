@@ -2,7 +2,7 @@ import prisma from "@/lib/prisma";
 import { NextResponse, NextRequest } from "next/server";
 
 export async function POST(req: NextRequest) {
-    const { name, location, locationLink, Date: dateString } = await req.json();
+    const { name, location, locationLink, Date: dateString, ClosingDate } = await req.json();
     if (!name || !location || !locationLink || !dateString) {
         return NextResponse.json({ error: "Missing required fields", status: 400 })
     }
@@ -13,7 +13,8 @@ export async function POST(req: NextRequest) {
                 name: name,
                 location: location,
                 locationLink: locationLink,
-                Date: new Date(dateString)
+                Date: new Date(dateString),
+                ClosingDate: new Date(ClosingDate)
             }
         })
         return NextResponse.json(registerTournament, { status: 200 });

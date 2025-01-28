@@ -33,6 +33,7 @@ model Tournament{
   location        String
   locationLink    String
   Date            DateTime
+  ClosingDate DateTime?
   createdAt       DateTime @default(now())
   registerSolo    RegisterSolo[]
   registerTeam    RegisterTeam[]

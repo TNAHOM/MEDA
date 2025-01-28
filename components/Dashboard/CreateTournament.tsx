@@ -20,7 +20,7 @@ const CreateTournament = ({ isOpen, setIsOpen }: CreateTournamentProps) => {
   const router = useRouter();
 
   const onSubmit: SubmitHandler<FormData> = async (data) => {
-    console.log(data, 'data');
+    console.log(data, "data");
     try {
       const response = await fetch("/api/tournament", {
         method: "POST",
@@ -77,6 +77,14 @@ const CreateTournament = ({ isOpen, setIsOpen }: CreateTournamentProps) => {
             placeholder="Enter Date"
             register={register}
             error={errors.Date?.message}
+          />
+          <FieldTemplate
+            label="Closing Date"
+            id="ClosingDate"
+            type="date"
+            placeholder="Enter Date"
+            register={register}
+            error={errors.ClosingDate?.message}
           />
           <input
             type="submit"

@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import CreateTournament from "../../../components/Dashboard/CreateTournament";
-import TournamentsList from "../../../components/Dashboard/TournamentsList";
 import SoloRegisterCount from "../../../components/Dashboard/SoloRegisterCount";
 import SoloRegisterCountPerTournament from "../../../components/Dashboard/SoloRegisterCountPerTournament";
+import UpcomingTornament from "../../../components/Home/UpcomingTornament";
 
 const Dashboard = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +14,7 @@ const Dashboard = () => {
       <SoloRegisterCount />
       <SoloRegisterCountPerTournament />
       <div className="">
-        <TournamentsList isOpen={isOpen} />
+        <UpcomingTornament isOpen={isOpen} isAdmin={true} />
         <CreateTournament isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
     </div>

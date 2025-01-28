@@ -14,4 +14,5 @@ export interface TournamentType {
   location: string;
   locationLink: string;
   Date: Date;
+  ClosingDate: Date;
 }
