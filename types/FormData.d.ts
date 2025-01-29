@@ -16,3 +16,10 @@ export interface TournamentType {
   Date: Date;
   ClosingDate: Date;
 }
+
+export interface FilterType {
+    name?: { mode: "insensitive" } | string;
+    phoneNumber?: number;
+    tournamentId: string;
+    AND?: { name?: string; phoneNumber?: number }[];
+}

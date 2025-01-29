@@ -1,7 +1,22 @@
+1st
 - Add Registration closing days @done
 - Add tournament link @done
     - In home page @done
     - In dashboard @done
         - Add the edit feature @done
 
-- Improve the dashboard UI
+2nd
+- Add search by phone number - 5 @done
+    - For a certain tournament @done
+    - For all the tournaments 
+
+
+- Improve the dashboard UI - 3
+    - Add the number of solo registration and team registration for each tournaments
+    - Also add the total number of players registerd for each tournaments
+    - Add ontop the total number of solo and team registration and the total number of tournaments
+    - Rredesign the dashboard
+
+- Improve the home page UI - 4
+    - If their is no players registerd/no top player say comming UP
+    - List the team name
